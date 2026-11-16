@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mayeesha Ibnath | Portfolio</title>
+<meta name="description" content="Mayeesha Ibnath: Public Administration student at University of Chittagong, Intern at Vacancy Hunting, YSSE Alumni, Hobbyist Writer from Chattogram, Bangladesh.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#f7f5fb;--surface:#fff;--ink:#241d33;--muted:#675e7c;--line:#ddd6ea;--accent:#7357ad;--tint:#ebe5f5;
+ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17131f;--surface:#211b2d;--ink:#ece8f4;--muted:#aba2c0;--line:#352d47;--accent:#b9a2e6;--tint:#2d2542}}
+:root[data-theme="dark"]{--bg:#17131f;--surface:#211b2d;--ink:#ece8f4;--muted:#aba2c0;--line:#352d47;--accent:#b9a2e6;--tint:#2d2542}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(60px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 "Times New Roman",Times,serif}
+h1,h2,h3{font-family:"Times New Roman",Times,serif;line-height:1.15;margin:0}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:4px;overflow-x:auto;padding:8px 14px}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:6px 12px;border-radius:99px;font-weight:700;font-size:16px}
+nav a:hover{background:var(--tint);color:var(--accent)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+main{max-width:760px;margin:0 auto;padding:0 20px 60px}
+.hero{padding:56px 0 36px}
+.hero h1{font-size:clamp(40px,11vw,68px);letter-spacing:-.01em}
+.hero .role{font-size:21px;color:var(--accent);font-weight:700;margin:12px 0 18px}
+.hero p{max-width:60ch;margin:0 0 22px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:10px 18px;border-radius:10px;border:1.5px solid var(--accent);text-decoration:none;font-weight:700}
+.btn.main{background:var(--accent);color:var(--bg)}
+section{padding:34px 0;border-top:1px solid var(--line)}
+h2{font-size:30px;margin-bottom:20px}
+.item{margin-bottom:18px}
+.item h3{font-size:20px}
+.meta{color:var(--muted);font-size:16px}
+.tl{border-left:2px solid var(--line);padding-left:18px;margin-left:4px}
+.tl .item{position:relative}
+.tl .item::before{content:"";position:absolute;left:-25px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.chips li{background:var(--tint);color:var(--accent);padding:5px 13px;border-radius:99px;font-weight:700;font-size:16px}
+.pub{margin:0 0 14px;padding-left:14px;border-left:3px solid var(--accent)}
+.score{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px}
+footer{text-align:center;color:var(--muted);font-size:15px;padding:24px 20px 40px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav id="nav"></nav>
+<main>
+  <header class="hero" id="home">
+    <h1 id="name"></h1>
+    <div class="role" id="headline"></div>
+    <p id="bio"></p>
+    <div class="btns" id="heroBtns"></div>
+  </header>
+  <div id="sections"></div>
+</main>
+<footer id="foot"></footer>
+
+<script>
+/* ============================================================
+   EDIT YOUR CONTENT HERE. Everything on the page comes from this block.
+   Rules: keep the quote marks "like this" and the commas at line ends.
+   For an apostrophe, type ’ (not ') so nothing breaks.
+   To add an item, copy a whole line { ... }, paste it, and change the words.
+   To remove an item, delete its whole line.
+   Keep the bio on one line (do not press Enter inside the quote marks).
+   ============================================================ */
+const DATA = {
+  name: "Mayeesha Ibnath",
+  headline: "Public Administration Student at University of Chittagong | Vacancy Hunting HR Intern | GPPRC Intern | Hobbyist Writer",
+  bio: "Public Administration Student at University of Chittagong. Currently an Intern at GPPRC (The Indian Netizens) and Vacancy Hunting, and Project Coordinator at the School for Entrepreneurship Development (SED). Recognized as Best Intern of the Department at YSSE, with leadership roles at Women In Leadership and Aemers, and three co-authored conference abstracts on sustainability, environmental policy and women in peacekeeping. Interested in public policy, research, HR, project management and sustainable development.",
+  linkedin: "https://www.linkedin.com/in/mayeesha-ibnath",
+  cv: "",            // paste a link to your CV PDF here (optional)
+  location: "Chattogram, Bangladesh",
+  reference: "Will be provided upon request",
+
+  experience: [
+    { title: "GPPRC Intern", org: "The Indian Netizens, New Delhi, India (Remote)", date: "Nov 2026 – Present" },
+    { title: "Intern, Human Resource Management Department", org: "Vacancy Hunting, Dhaka, Bangladesh (Remote)", date: "Oct 2026 – Present" },
+    { title: "Intern", org: "International Institute for SDGs and Public Policy Research (IISPPR), Uttar Pradesh, India (Remote)", date: "Oct 2026 – Nov 2026" },
+    { title: "Project Coordinator", org: "School for Entrepreneurship Development (SED), Dhaka, Bangladesh (Hybrid)", date: "Feb 2026 – Present" },
+    { title: "Business Development Executive", org: "English Carnival Bangladesh, Dhaka, Bangladesh (Hybrid)", date: "Dec 2025 – Apr 2026" },
+    { title: "Intern, Admin & HR Department", org: "Youth School for Social Entrepreneurs (YSSE), Dhaka, Bangladesh (Remote)", date: "Mar 2025 – Aug 2025" },
+    { title: "Graphic Designer", org: "Creativity Closet, Chattogram, Bangladesh", date: "Jul 2021 – Sep 2021" }
+  ],
+
+  education: [
+    { title: "Masters of Social Science, Public Administration", org: "University of Chittagong, Chattogram, Bangladesh", date: "Oct 2026 – Present" },
+    { title: "Bachelor of Social Science, Public Administration (CGPA: Unpublished)", org: "University of Chittagong, Chattogram, Bangladesh", date: "Dec 2022 – Sep 2026" },
+    { title: "HSC (Higher Secondary Certificate), Science (GPA: 5.00)", org: "Govt. Hazi Muhammad Mohsin College, Chattogram, Bangladesh", date: "Dec 2021" },
+    { title: "SSC (Secondary School Certificate), Science (GPA: 5.00)", org: "Dr. Khastagir Government Girls’ High School, Chattogram, Bangladesh", date: "Feb 2019" }
+  ],
+
+  leadership: [
+    { title: "Campus Ambassador", org: "Women In Leadership (WIL)", date: "Jan 2026 – Present" },
+    { title: "Campus Leader", org: "Leaders of Leaders’ Horizon, Campus Leaders Program 2.0, Aemers’ SAT & US College Admission (Remote)", date: "Dec 2025 – Mar 2026" },
+    { title: "Executive Director", org: "Aemers Math Olympiad 2026 Organizing Board", date: "Dec 2025 – Jan 2026" },
+    { title: "Campus Ambassador", org: "English Carnival Bangladesh", date: "Jul 2025 – Jul 2026" },
+    { title: "Online Event Volunteer", org: "Career Summit 2025 by Youth Skill Development Institute Trust", date: "Jul 2025 – Nov 2025" },
+    { title: "Executive Member, Human Resource Management Department", org: "Aachol Foundation (Remote)", date: "Jul 2025 – Aug 2025" },
+    { title: "Campus Ambassador", org: "Aemers’ SAT & US College Admission (Remote)", date: "Jul 2025 – Aug 2025" },
+    { title: "Volunteer", org: "Divisional Leadership Summit, Chattogram", date: "Jul 2025" },
+    { title: "Social Responsibility Weekly Leader", org: "Youth School for Social Entrepreneurs (YSSE)", date: "May, Jun, Jul 2025" },
+    { title: "Assistant Election Commissioner", org: "School Student Committee", date: "Jan 2017 – Mar 2017" },
+    { title: "Student", org: "Zilla Shilpokola Academy, Chattogram", date: "Jan 2015 – Dec 2017" },
+    { title: "Member", org: "High School Debate Club", date: "Jan 2015 – Dec 2015" },
+    { title: "Event Organizing Team Member", org: "Red Crescent Youth Club", date: "Jun 2015" }
+  ],
+
+  achievements: [
+    { title: "Youth SDG Fellow", org: "Commonwealth Students’ Association", date: "May 2026" },
+    { title: "Best Intern of the Department", org: "Admin & HR Department, Youth School for Social Entrepreneurs", date: "Aug 2025" },
+    { title: "Campus Ambassador of the Month", org: "Aemers’ SAT & US College Admission", date: "Jul 2025" },
+    { title: "Winner, No More Sound Pollution: Youth Quiz Festival, Event 1", org: "DOE", date: "Jun 2025" },
+    { title: "2nd Runners-Up (Team Decoders), ProMAESTROS Championship", org: "Presentation Pro", date: "May 2025" },
+    { title: "Intern of the Month", org: "Admin & HR Department, Youth School for Social Entrepreneurs", date: "Apr 2025" },
+    { title: "2nd Runner-Up (Group 23), FGD Competition", org: "YSSE", date: "Apr 2025" },
+    { title: "Champion, Virtual Language Fest", org: "ULAB Language Club", date: "Apr 2025" },
+    { title: "SDG Ambassador, Zero Olympiad", org: "Faatiha Ayat", date: "Feb 2025" },
+    { title: "4th Place Winner, 19th Rafi Smrity Art Competition", org: "", date: "Jul 2017" },
+    { title: "Top Scorer (2016) and Winner, British Council Book Reading Competition", org: "", date: "Dec 2013 – Dec 2017" },
+    { title: "Winner, Bishwoshahitto Kendro Book Reading Competition", org: "", date: "2013 and 2014" }
+  ],
+
+  publications: [
+    "Ibnath M. Abstract: Integrated Government Service Delivery: Comparative Lessons from India and South Korea for Bangladesh’s Digital Governance Reform. India-Korea International Conference 2026 (IKIC 2026), India-Korea Forum (IKF), 23–25 October 2026.",
+    "Aranya A., Ibnath M., & Amin A. Abstract: Grassroots to Global: Evaluating Public and Youth Perspectives on Women in Peacekeeping as Bangladesh’s Soft Power. 1st RCASBC International Conference, 2026, 13–14 September 2026.",
+    "Aranya A., Ibnath M., & Amin A. Abstract: Public Perception of Environmental Policies in Bangladesh: Challenges and Opportunities. 1st JURS International Conference on Interdisciplinary Research for Sustainability, Innovation and Global Challenges, 2026, 29 September 2026.",
+    "Aranya A. & Ibnath M. Abstract: Embedding Sustainability across all Disciplines Rather than Isolating it as a Standalone Subject. 8th International Conference on Sustainable Development (UIU-ICSD 2026), 11–12 April 2026."
+  ],
+
+  training: [
+    { title: "CareerX Spark+", org: "Bangladesh Youth Leadership Center (BYLC)", date: "Apr 2025" },
+    { title: "Poverty Reduction & Rural Development", org: "Bangladesh Academy for Rural Development (BARD), Cumilla", date: "Feb 2025" },
+    { title: "Interactive & Spoken English", org: "Executives Care", date: "Mar 2019 – May 2019" },
+    { title: "Debate Workshop", org: "Dristy Chittagong", date: "Aug 2018" },
+    { title: "Basic First Aid Training", org: "Bangladesh Red Crescent Society", date: "Apr 2015" }
+  ],
+
+  tests: [
+    { title: "IELTS: Band 7.5", detail: "Listening 8, Reading 9, Writing 6.5, Speaking 6.5", date: "Jan 2026" },
+    { title: "SAT (Scholastic Aptitude Assessment): 1160", detail: "", date: "Jun 2025" },
+    { title: "IELTS: Band 8", detail: "Listening 8.5, Reading 8.5, Writing 7, Speaking 7", date: "Sep 2024" },
+    { title: "Aptis for Teens Speaking: CEFR Grade C", detail: "", date: "Sep 2019" }
+  ],
+
+  skills: ["Graphic design", "Team management", "Leadership", "Public speaking", "Content writing", "Handcraft", "Painting"],
+  languages: ["Bengali (Native)", "English"]
+};
+/* ======================= END OF EDIT AREA ======================= */
+
+const $ = id => document.getElementById(id);
+const items = list => list.map(i => `<div class="item"><h3>${i.title}</h3>${i.org ? `<div>${i.org}</div>` : ""}<div class="meta">${i.date}</div></div>`).join("");
+const chips = list => `<ul class="chips">${list.map(s => `<li>${s}</li>`).join("")}</ul>`;
+
+const SECTIONS = [
+  ["experience", "Experience", `<div class="tl">${items(DATA.experience)}</div>`],
+  ["education", "Education", `<div class="tl">${items(DATA.education)}</div>`],
+  ["leadership", "Leadership & extracurricular activities", items(DATA.leadership)],
+  ["achievements", "Achievements & recognitions", items(DATA.achievements)],
+  ["publications", "Publications", DATA.publications.map(p => `<p class="pub">${p}</p>`).join("")],
+  ["training", "Training & workshops", items(DATA.training)],
+  ["tests", "Test scores", DATA.tests.map(t => `<div class="score"><h3>${t.title}</h3>${t.detail ? `<div>${t.detail}</div>` : ""}<div class="meta">${t.date}</div></div>`).join("")],
+  ["skills", "Skills & languages", chips(DATA.skills) + `<h3 style="margin:22px 0 10px;font-size:18px">Languages</h3>` + chips(DATA.languages)],
+  ["contact", "Contact", `<p>${DATA.location}</p><p><b>Reference:</b> ${DATA.reference}</p><div class="btns"><a class="btn main" href="${DATA.linkedin}" target="_blank" rel="noopener">LinkedIn</a>${DATA.cv ? `<a class="btn" href="${DATA.cv}" target="_blank" rel="noopener">View CV</a>` : ""}</div>`]
+];
+
+document.title = DATA.name + " | Portfolio";
+$("name").textContent = DATA.name;
+$("headline").textContent = DATA.headline;
+$("bio").textContent = DATA.bio;
+$("heroBtns").innerHTML = `<a class="btn main" href="#contact">Get in touch</a><a class="btn" href="#experience">See my work</a>`;
+$("nav").innerHTML = `<a href="#home">Home</a>` + SECTIONS.map(s => `<a href="#${s[0]}">${s[1].split(" &")[0]}</a>`).join("");
+$("sections").innerHTML = SECTIONS.map(s => `<section id="${s[0]}"><h2>${s[1]}</h2>${s[2]}</section>`).join("");
+$("foot").textContent = "© " + new Date().getFullYear() + " " + DATA.name;
+</script>
+</body>
+</html>
